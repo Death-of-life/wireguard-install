@@ -449,7 +449,7 @@ function uninstallWg() {
 				dnf remove -y --noautoremove wireguard-dkms
 				dnf copr disable -y jdoss/wireguard
 			fi
-		elif [[ ${OS} == 'centos' ]] || [[ ${OS} == 'almalinux' ]] || [[ ${OS} == 'rocky' ]]; then
+		elif [[ ${OS} == 'centos' ]] || [[ ${OS} == 'almalinux' ]] || [[ ${OS} == 'rocky' ]] || [[ ${OS} == 'opencloudos' ]]; then
 			yum remove -y --noautoremove wireguard-tools
 			if [[ ${VERSION_ID} == 8* ]]; then
 				yum remove --noautoremove kmod-wireguard qrencode
